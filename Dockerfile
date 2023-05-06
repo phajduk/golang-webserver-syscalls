@@ -4,8 +4,7 @@ FROM golang:1.19
 WORKDIR /app
 
 # Download Go modules
-COPY go.mod go.sum ./
-RUN go mod download
+COPY go.mod ./
 
 # Copy the source code. Note the slash at the end, as explained in
 # https://docs.docker.com/engine/reference/builder/#copy
